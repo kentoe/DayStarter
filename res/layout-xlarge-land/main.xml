@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TableLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/wallpaper"
+    android:stretchColumns="*"
+    android:shrinkColumns="*" >
+
+    <TableRow	android:id="@+id/tableRowClock"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:gravity="center_horizontal">
+    
+    
+			    <DigitalClock
+			        android:id="@+id/digitalClock"
+			        android:layout_width="fill_parent"
+			        android:layout_height="150px"
+			        android:layout_gravity="center"
+			        android:onClick="launchAlarm"
+			        android:paddingTop="30dp"
+			        android:shadowColor="#FFFFFF"
+			        android:shadowDx="1"
+			        android:shadowDy="1"
+			        android:shadowRadius="8"
+			        android:text="DigitalClock"
+			        android:textColor="#FFFFFF"
+			        android:textSize="40pt" />
+    
+    </TableRow>
+    
+    <TableRow	android:id="@+id/tableRowFirstIcons"
+        		android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		>
+			    
+				<LinearLayout 
+			        android:layout_width="0dp" 
+			        android:layout_height="wrap_content"
+			        android:gravity="center_horizontal"
+			        android:orientation="horizontal"
+			        android:layout_weight="1"
+			        >	
+			        				    
+					    <ToggleButton
+					        android:id="@+id/waveButton"
+					        android:background="@drawable/waveselector"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:textOff=""
+					        android:textOn="">
+					    </ToggleButton>
+					    
+				</LinearLayout>
+			
+				    
+				<LinearLayout 
+			        android:layout_width="0dp" 
+			        android:layout_height="wrap_content"
+			        android:gravity="center_horizontal"
+			        android:orientation="horizontal"
+			        android:layout_weight="1"
+			        >	
+					    <ImageView
+					        android:id="@+id/twitterImage"
+					        android:layout_width="fill_parent"
+					        android:layout_height="wrap_content"
+					        android:onClick="launchTwitter"
+					        android:src="@drawable/twitter"
+					        android:gravity="center_horizontal"
+					        android:layout_weight="1">
+					    </ImageView>
+			
+				</LinearLayout>
+				
+				<LinearLayout 
+			        android:layout_width="0dp" 
+			        android:layout_height="wrap_content"
+			        android:gravity="center_horizontal"
+			        android:orientation="horizontal"
+			        android:layout_weight="1"
+			        >	
+					    <ImageView
+					        android:id="@+id/facebookImage"
+					        android:layout_width="fill_parent"
+					        android:layout_height="wrap_content"
+					        android:onClick="launchFacebook"
+					        android:src="@drawable/facebook"
+					        android:gravity="center_horizontal"
+					        android:layout_weight="1">
+					    </ImageView>
+					    
+				</LinearLayout>
+				
+				<LinearLayout 
+			        android:layout_width="0dp" 
+			        android:layout_height="wrap_content"
+			        android:gravity="center_horizontal"
+			        android:orientation="horizontal"
+			        android:layout_weight="1"
+			        >	
+				    
+					    <ImageView 
+					        android:id="@+id/gmailImage" 
+					    	android:src="@drawable/gmail" 
+					    	android:layout_width="wrap_content" 
+					    	android:layout_height="wrap_content" 
+					    	android:layout_gravity="center"
+					    	android:onClick="launchGmail"
+					    	android:paddingBottom="10dp"></ImageView>
+					    
+				</LinearLayout>
+			    
+	</TableRow>
+
+</TableLayout>
