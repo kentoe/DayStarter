@@ -215,6 +215,7 @@ public class DayStarterActivity extends Activity {
     
     public void startMusic()
     {
+    	
     	mp = MediaPlayer.create(this, R.raw.waves);
         mp.setLooping(true);
         /**Auto-generated**/
@@ -234,17 +235,18 @@ public class DayStarterActivity extends Activity {
     
     public void stopMusic()
     {
-    	mp.setLooping(false);
     	if(mp != null)
     	{
     		if(mp.isPlaying())
     		{
     			mp.stop();
+    	    	mp.setLooping(false);
     		}
+
+        	mp.release();
+    		mp = null;
     	}
     	
-    	mp.release();
-		mp = null;
     }
     
     public void launchGmail(View v)
