@@ -235,16 +235,23 @@ public class DayStarterActivity extends Activity {
     
     public void stopMusic()
     {
-    	if(mp != null)
+    	try
     	{
-    		if(mp.isPlaying())
-    		{
-    			mp.stop();
-    	    	mp.setLooping(false);
-    		}
+        	if(mp != null)
+        	{
+        		if(mp.isPlaying())
+        		{
+        			mp.stop();
+        	    	mp.setLooping(false);
+        		}
 
-        	mp.release();
-    		mp = null;
+            	mp.release();
+        		mp = null;
+        	}
+    		
+    	}catch(Exception e)
+    	{
+    		Log.i("Stop Music", "Something went wrong stopping the music");
     	}
     	
     }
