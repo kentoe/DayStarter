@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/wallpaper"
+    >
+
+    <DigitalClock
+        android:id="@+id/digitalClock"
+        android:gravity="center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:paddingBottom="50dp"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="8"
+        android:text="DigitalClock"
+        android:textColor="#FFFFFF"
+        android:textSize="20pt" 
+        android:onClick="launchAlarm"/>
+    
+    
+    <ScrollView android:id="@+id/ScrollView01"
+ 				android:layout_height="325dp"
+ 				android:layout_width="wrap_content"
+ 				android:layout_gravity="center"
+ 				android:paddingTop="10dp"
+ 				android:fillViewport="true">
+ 				
+        
+ 		<LinearLayout android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content"
+					  android:gravity="center"
+					  android:orientation="vertical">	
+    
+					    <LinearLayout 
+								        android:layout_width="wrap_content" 
+								        android:layout_height="wrap_content"
+								        android:layout_gravity="center"
+								        android:paddingBottom="10dp"
+								        >	
+					    
+								    <ToggleButton android:id="@+id/waveButton" 
+								        		  android:textOn=""
+								        		  android:textOff=""
+								    			  android:background="@drawable/waveselector"
+								    			  android:layout_gravity="center" 
+								    		      android:layout_height="wrap_content"
+								    		      android:layout_width="wrap_content"
+								    		      ></ToggleButton>
+								    
+						</LinearLayout>
+					    	
+					    <ImageView 
+					    	android:src="@drawable/messagetest" 
+					    	android:id="@+id/sendMessage" 
+					    	android:layout_width="wrap_content" 
+					    	android:layout_height="wrap_content" 
+					    	android:layout_gravity="center"
+					    	android:onClick="sendMessage"
+					    	android:paddingBottom="10dp"></ImageView>
+					    
+					    <ImageView 
+					    	android:src="@drawable/twitter" 
+					    	android:id="@+id/twitterImage" 
+					    	android:layout_width="wrap_content" 
+					    	android:layout_height="wrap_content" 
+					    	android:layout_gravity="center"
+					    	android:onClick="launchTwitter"
+					    	android:paddingBottom="10dp"></ImageView>
+					    
+					    <ImageView 
+					    	android:src="@drawable/facebook" 
+					    	android:layout_width="wrap_content" 
+					    	android:layout_height="wrap_content" 
+					    	android:id="@+id/facebookImage" 
+					    	android:layout_gravity="center"
+					    	android:onClick="launchFacebook"
+					    	android:paddingBottom="10dp"></ImageView>
+					    
+					    <ImageView 
+					        android:id="@+id/gmailImage" 
+					    	android:src="@drawable/gmail" 
+					    	android:layout_width="wrap_content" 
+					    	android:layout_height="wrap_content" 
+					    	android:layout_gravity="center"
+					    	android:onClick="launchGmail"
+					    	android:paddingBottom="10dp"></ImageView>
+    	
+    	</LinearLayout>
+    	
+ 	</ScrollView>
+
+</LinearLayout>
